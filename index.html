@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Voice control on digital maps</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/index.css">
+      
+    <!--loading the geocoder api of the mapbox-->
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+        type="text/css">
+   
+   
+
+</head>
+
+<body id="bodyTag" class="">
+    <div id='map'></div>
+    <div id="live-chat">
+        <header class="clearfix">
+            <h4>Conversation log</h4>
+        </header>
+        <div class="chat">
+            <div id="chat-history">
+                <div class="chat-message clearfix">
+                    <div id="chat-message-content-sys" class="clearfix">
+                        <span class="chat-time-sys"></span>
+                        <h5>System</h5>
+                        Explore Italy with voice commands
+                    </div>
+                </div>
+                <hr>
+                <div class="chat-message clearfix">
+                    <div id="chat-message-content-user" class="clearfix">
+                        <span class="chat-time-user"></span>
+                        <h5></h5>
+                        <span id="final_span" class="final"></span>
+                        <span id="interim_span" class="interim"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="control-area">
+                <button id="primary" onclick="startButton2(event)" autofocus>Start</button>
+            </div>
+
+        </div>
+    </div>
+    <div  id="Legend-and-Hover">
+        <!-- <div class="map-overlay" id="features">
+            <h2></h2>
+            <div id="pd">
+                <p></p>
+            </div>
+        </div>
+        <div class="map-overlay" id="legend"></div> -->
+    </div>
+
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="main.js"></script>
+
+<!-- <script src="covidMapItaly.js"></script> -->
+</html>
+
+
